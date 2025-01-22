@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoursesForm</title>
+  </head>
+  <body>
+    <header>
+      <h1>To enroll in a course fill the next form</h1>
+    </header>
+    <main>
+      <section>
+        <form action="">
+          <fieldset>
+            <!--It is used to make groups-->
+            <legend>Basic data</legend>
+            Name: <input type="text" placeholder="Jonh Doe" required />
+            <br />
+            Last name: <input type="text" placeholder="Unknown" required />
+            <br />
+            e-mail:
+            <input
+              type="email"
+              placeholder="JonhDoeUnknown@domain.com"
+              required
+            />
+            <br />
+            Phone Number:
+            <input type="number" placeholder="+23 2353927503" required />
+            <br />
+          </fieldset>
+          <fieldset>
+            <legend>Course Information</legend>
+            <!--The value of label attribute must be the same than the value of the ID attribute correspondingly-->
+            <label for="delibery">
+              <input id="delibery" type="radio" name="ClayPot" />
+              How yo make your own clay pot
+            </label>
+            <br />
+            <label for="HeadquartersPickup">
+              <input id="HeadquartersPickup" type="radio" name="DeliberyData" />
+              The Tequila's route
+            </label>
+            <br />
+            <input id="Preferred" type="radio" name="DeliberyData" />
+            <label for="Preferred">How to make your hibiscus water</label>
+            <br />
+            <br />
+            <label for="Subsidiary">Select place to learn:</label>
+            <br />
+            <select name="Subsidiary" required>
+              <option value="" selected hidden disabled>Choose a course</option>
+              <option value="">Tepoztlan</option>
+              <option value="">Cuernavaca</option>
+              <option value="">Cuautla</option>
+              <option value="">Tres Marias</option>
+              <option value="">Zacatepec</option>
+              <option value="">Jardines de México</option>
+            </select>
+            <br />
+            <br />
+            <label>
+              Choose a valid date to take the course
+              <input
+                type="date"
+                name="DaySelected"
+                required
+                min="2025-03-01"
+                max="2025-03-29"
+              />
+            </label>
+            <br>
+            <br>
+            <input type="checkbox" checked required /> Terms & Conditios apply
+            <br />
+            <br />
+            <button type="submit">Enroll</button>
+          </fieldset>
+          <fieldset>
+            <legend>Additional Notes</legend>
+            <span></span>
+            <br />
+            <textarea
+              name="notes"
+              rows="4"
+              cols="200"
+              placeholder="Share any additional details about the course selected..."
+            ></textarea>
+            <br>
+          </fieldset>
+          <fieldset>
+            <button type="reset">Clear</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
